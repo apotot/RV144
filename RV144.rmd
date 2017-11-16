@@ -15,13 +15,14 @@ require(tigerstats)
 
 In the late 1980s in Thailand, there was a dramatic increase in the prevalence of infection with the human immunodeficiency virus type 1 (HIV-1) in sentinel surveillance cohorts.1-3 Initially, these groups consisted of injection-drug users and commercial sex workers; they were subsequently expanded to include persons in the general population. By 1995, the overall seroprevalence of HIV-1 reached a peak of 3.7% among conscripts in the Royal Thai Army and of 12.5% among conscripts from Northern Thailand.2,4,5 The Thai Ministry of Public Health responded with an effective HIV-prevention campaign, and the number of new HIV-1 infections per year decreased from an estimated 143,000 in 1990 to 14,000 in 2007.2,4,6-9 The persistence of new infection despite these measures led public health officials to conclude that an HIV vaccine, within the context of a broader HIV-prevention program, was needed for better control of the epidemic.
 
-
+>In this data, we will show the results of the population that infeted by Aids with vaccine and the other that has placebo effect. 
 
 ## Methods and data
 
 Study Design and Population
 This study was a community-based, randomized, multicenter, double-blind, placebo-controlled efficacy trial of the prime–boost combination of vaccines containing ALVAC-HIV (vCP1521) (Sanofi Pasteur) and AIDSVAX B/E (Global Solutions for Infectious Diseases). For details regarding the vaccines and placebo, see the Supplementary Appendix, available with the full text of this article at NEJM.org. The study was designed to evaluate two coprimary end points: the prevention of HIV-1 infection and the effect of vaccination on the early viral load after infection. The trial was conducted through facilities of the Thai Ministry of Public Health in Rayong and Chon Buri provinces. From September 2003 through December 2005, a total of 16,402 volunteers were enrolled.
 Thai men and women who were between the ages of 18 and 30 years and who were not infected with HIV were recruited from the community without regard to HIV risk (i.e., community risk). Written informed consent was obtained from all volunteers, who were required to pass a written test of understanding. Women were counseled to practice effective contraception until 3 months after the last vaccination; pregnant and breast-feeding women were excluded.
+
 
 ###Study Design and Population
 This study was a community-based, randomized, multicenter, double-blind, placebo-controlled efficacy trial of the prime–boost combination of vaccines containing ALVAC-HIV (vCP1521) (Sanofi Pasteur) and AIDSVAX B/E (Global Solutions for Infectious Diseases). For details regarding the vaccines and placebo, see the Supplementary Appendix, available with the full text of this article at NEJM.org. The study was designed to evaluate two coprimary end points: the prevention of HIV-1 infection and the effect of vaccination on the early viral load after infection. The trial was conducted through facilities of the Thai Ministry of Public Health in Rayong and Chon Buri provinces. From September 2003 through December 2005, a total of 16,402 volunteers were enrolled.
@@ -45,16 +46,19 @@ rownames(results) <- c("none","aids")
 
 ## Results
 <!-- You are to add descriptive comments to explain to the reader what the plot is showing !-->
-The graph shows that 50% of people 18-30 years old who undergone vaccine and placebo are is not infected with HIV while the infected ones with Aids has 40% of vaccinated and 60% of people having placebo.
+
+The graph shows that 50% of people 18-30 years old who undergone vaccine and placebo are is not infected with HIV while the infected ones with Aids has 40% of vaccinated and 60% of people having placebo.Give or take it must some kind of little bit but not too much difference here.
 
 
 ### Graphical results
 This is the graphical results of the data 
 <!--Display graphical evidence as to the effectiveness of the vaccine with explanations!-->
+
 ```{r}
 barchartGC(results,type = "percent")
 ```
 
+```
 ### Numerical Results
 
 <!--Display numerical evidence as to the effectiveness of the vaccine with explanations !--> 
@@ -63,20 +67,23 @@ barchartGC(results,type = "percent")
 colPerc(results)
 rowPerc(results)
 ```
-This numerical explanation of the graph shows that people who had not infected by HIV-1 has approximately 99.38 and somehow 0.68 are partly does. while,people taking placebos,not infected got a perfectly 99.1 and 0.9 are the difference. Overall, the total of none-infected has the same result.They are not infected.However,the seconnd graph those infected with Aids who has none either vaccine and placebo one has 50.07  against the 49.93.On the other hand, 40.80 has aids with vaccine and 59.20 has placebos infected by HIV.The ones taking placebo have a higher result of infection.
+This numerical explanation of the graph shows that people who had not infected by HIV-1 has approximately 99.38 and somehow 0.63 are partly does. while,people taking placebos,not infected got a perfectly 99.1 and 0.9 are the difference. Overall, the total of none-infected has the same result.They are not infected.However,the seconnd graph those infected with Aids who has none either vaccine and placebo one has 50.07  against the 49.93.On the other hand, 40.80 has aids with vaccine and 59.20 has placebos infected by HIV.The ones taking placebo have a higher result of infection.
 
 
 
 ## Inferential results
 
 <!--Display inferential evidence as to the effectiveness of the vaccine with explanations and interpretations!-->
+The chisqtest will show the inferential result.
+In this interpretation
 
 ```{r}
-chisqtestGC(results, graph = TRUE)
+chisqtestGC(results)
 ```
 
 
 ## Conclusions
 
 <Summarise your results as to the effectiveness of the vaccine with explanations that could be understood by your mom>
- My conclusion, base on graphical and numerical result, People that are not infected yet with vaccine and placebo have the same result. they both have approximately 50-50 of the result. However the result of people with aids has the higher amount of counts. On Chi Square Test, the results showing that 3.9017 is the difference of infected ones from none infected ones. the p-value which is 0.0482.
+
+ My conclusion, base on graphical and numerical result, People that are not infected yet with vaccine and placebo have the same result. they both have approximately 50-50 of the result. However the result of people with aids has the little high amount of counts.However, On Chi Square Test, the results showing the p-value which is 0.0482 which means its in a borderline of our Null hyphotesis I would say that the results is true and it has no really difference of the results between people with vaccinated and ones who took placebos.
